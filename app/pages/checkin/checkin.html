@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Your Appointments</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="checkin">
+  <ion-card>
+
+    <!-- Time -->
+    <ion-card-header class="card-header-primary">
+      9 AM, 2 Dec 2016
+    </ion-card-header>
+
+    <!-- The Doc -->
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="img/doctor.png">
+      </ion-avatar>
+      <h2>Dr. House</h2>
+      <p>Orthopaedist</p>
+    </ion-item>
+
+    <!-- Map -->
+    <img src="img/map.png">
+
+    <ion-list>
+
+      <ion-item no-lines>
+        <ion-icon name="compass" small item-left class="contact-icon"></ion-icon>
+        <p item-left> Baker Street 2, 01277 Dresden</p>
+      </ion-item>
+
+      <ion-item no-lines>
+        <ion-icon name="call" small item-left class="contact-icon"></ion-icon>
+        <p item-left>0351/783921</p>
+      </ion-item>
+
+      <ion-item text-wrap>
+        Multiline text that should wrap when it is too long
+        to fit on one line in the item.
+      </ion-item>
+
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <button primary clear>
+          <ion-icon name="time"></ion-icon>
+          <div>FORECAST</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button primary clear (click)="checkin()">
+          <ion-icon name="checkmark"></ion-icon>
+          <div>CHECK IN</div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>
+
