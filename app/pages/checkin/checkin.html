@@ -5,59 +5,58 @@
 </ion-header>
 
 <ion-content class="checkin">
-  <ion-card>
+  <ion-list>
+    <ion-item *ngFor="let appointment of appointments" class="item-appointment">
+      <ion-card class="card-appointment">
+         <ion-card-header class="card-header-primary">
+           {{appointment.date}}
+         </ion-card-header>
+         <ion-item>
+           <ion-avatar item-left>
+             <img src="img/checkin/{{appointment.docAvatarUri}}">
+           </ion-avatar>
+           <h2>{{appointment.doctor}}</h2>
+           <p>{{appointment.doctype}}</p>
+         </ion-item>
 
-    <!-- Time -->
-    <ion-card-header class="card-header-primary">
-      9 AM, 2 Dec 2016
-    </ion-card-header>
+         <img src="img/checkin/{{appointment.posUri}}">
 
-    <!-- The Doc -->
-    <ion-item>
-      <ion-avatar item-left>
-        <img src="img/doctor.png">
-      </ion-avatar>
-      <h2>Dr. House</h2>
-      <p>Orthopaedist</p>
+         <ion-list>
+
+           <ion-item no-lines>
+             <ion-icon name="compass" small item-left class="contact-icon"></ion-icon>
+             <p item-left>{{appointment.address}}</p>
+           </ion-item>
+
+           <ion-item no-lines>
+             <ion-icon name="call" small item-left class="contact-icon"></ion-icon>
+             <p item-left>{{appointment.phone}}</p>
+           </ion-item>
+
+           <ion-item text-wrap>
+             {{appointment.desc}}
+           </ion-item>
+
+         </ion-list>
+
+         <ion-row>
+           <ion-col>
+             <button primary clear>
+               <ion-icon name="time"></ion-icon>
+               <div>FORECAST</div>
+             </button>
+           </ion-col>
+           <ion-col>
+             <button primary clear (click)="checkin(appointment)">
+               <ion-icon name="checkmark"></ion-icon>
+               <div>CHECK IN</div>
+             </button>
+           </ion-col>
+         </ion-row>
+       </ion-card>
     </ion-item>
-
-    <!-- Map -->
-    <img src="img/map.png">
-
-    <ion-list>
-
-      <ion-item no-lines>
-        <ion-icon name="compass" small item-left class="contact-icon"></ion-icon>
-        <p item-left> Baker Street 2, 01277 Dresden</p>
-      </ion-item>
-
-      <ion-item no-lines>
-        <ion-icon name="call" small item-left class="contact-icon"></ion-icon>
-        <p item-left>0351/783921</p>
-      </ion-item>
-
-      <ion-item text-wrap>
-        Multiline text that should wrap when it is too long
-        to fit on one line in the item.
-      </ion-item>
-
-    </ion-list>
-
-    <ion-row>
-      <ion-col>
-        <button primary clear>
-          <ion-icon name="time"></ion-icon>
-          <div>FORECAST</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button primary clear (click)="checkin()">
-          <ion-icon name="checkmark"></ion-icon>
-          <div>CHECK IN</div>
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
+  </ion-list>
 </ion-content>
+
+
 

@@ -1,8 +1,41 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Dr Housegit </ion-title>
+      <ion-title>{{appointment.time}} {{appointment.doctor}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="time">
+  <ion-slides #qualitySlider [options]="sliderOptions" class="slides-quality">
+
+    <ion-slide class="slide-quality">
+      <ion-card class="card-quality">
+        <img src="img/quality.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+            Quality Time
+          </ion-card-title>
+          <p>
+            You have checked in successfully. Now you can use the remaining time the way you like.
+            Be more productive on that project you have or just relax at a Cafe nearby. If anything changes,
+            you'll get notified right away.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide class="slide-quality">
+      <h2>Slide 2</h2>
+    </ion-slide>
+
+    <ion-slide class="slide-quality">
+      <h2>Slide 3</h2>
+    </ion-slide>
+
+  </ion-slides>
+
+  <ion-item class="display-time">
+    <ion-icon name="time" large item-left></ion-icon>
+    {{appointment.forecast}}
+    <ion-badge item-right>{{appointment.queue}}</ion-badge>
+  </ion-item>
 </ion-content>

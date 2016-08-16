@@ -8,4 +8,16 @@
   .contact-icon{
     color: rgb(102, 102, 102);
   }
+
+  .item-appointment{
+    padding: 0px;
+
+    .item-inner{
+      padding: 0px;
+    }
+
+    ion-label{
+      margin: 0px;
+    }
+  }
 }
