@@ -7,13 +7,51 @@
     height: 100%;
   }
 
+  .swiper-pagination-bullet{
+    background: rgb(66, 66, 66);
+  }
+
   .card-quality{
-    height: 90%;
+    height: 88%;
   }
 
   .display-time{
     height: 10%;
     font-size: large;
     color:  rgb(69, 163, 161);
+  }
+
+  .container-banner{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .btn-quality{
+    top: 35%;
+    right: 10%;
+  }
+
+  .title{
+    min-height: 3em;
+    padding: 0px;
+
+    h2{
+      white-space: normal;
+      font-size: 1.1em;
+    }
+
+    .logo{
+      height: 3em;
+      float: left;
+      margin-right: 10px;
+    }
   }
 }
