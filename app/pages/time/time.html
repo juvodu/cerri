@@ -25,50 +25,26 @@
       </ion-card>
     </ion-slide>
 
-    <ion-slide class="slide-quality">
+    <ion-slide class="slide-quality" *ngFor="let ad of ads">
       <ion-card class="card-quality">
         <div class="container-banner">
-          <img class="banner" src="img/time/cafe.png"/>
+          <img class="banner" src="img/time/{{ad.banner}}"/>
           <button fab class="btn-quality">
-            <ion-icon name="navigate"></ion-icon>
+            <ion-icon name="{{ad.actionIcon}}"></ion-icon>
           </button>
         </div>
         <ion-card-content>
           <ion-item class="title">
-            <img class="logo" src="img/time/starbucks.png"/>
-            <h2>What about breakfast?</h2>
-            <p>Starbucks</p>
+            <img class="logo" src="img/time/{{ad.logo}}"/>
+            <h2>{{ad.title}}</h2>
+            <p>{{ad.company}}</p>
           </ion-item>
           <p>
-            There is a Starbucks right around the corner.
-            With this QR-Code you get 30% discount for your Café.
+            {{ad.desc}}
           </p>
         </ion-card-content>
       </ion-card>
     </ion-slide>
-
-    <ion-slide class="slide-quality">
-      <ion-card class="card-quality">
-        <div class="container-banner">
-          <img class="banner" src="img/time/audio.jpg"/>
-          <button fab class="btn-quality">
-            <ion-icon name="headset"></ion-icon>
-          </button>
-        </div>
-        <ion-card-content>
-          <ion-item class="title">
-            <img class="logo" src="img/time/audible.png"/>
-            <h2>What is your story?</h2>
-            <p>Audible</p>
-          </ion-item>
-          <p>
-            Create your Audible account now and get your first audio book for free
-            right away on your phone!
-          </p>
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-
   </ion-slides>
 
   <ion-item class="display-time">
