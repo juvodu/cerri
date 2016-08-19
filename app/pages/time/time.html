@@ -47,9 +47,14 @@
     </ion-slide>
   </ion-slides>
 
-  <ion-item class="display-time">
-    <ion-icon name="time" large item-left></ion-icon>
-    {{appointment.forecast}}
-    <ion-badge item-right>{{appointment.queue}}</ion-badge>
-  </ion-item>
 </ion-content>
+
+<ion-footer class="time">
+  <ion-toolbar class="foo">
+    <ion-item class="display-time" (click)="checkout(appointment)">
+      <ion-icon name="time" large item-left></ion-icon>
+      {{appointment.forecast}}
+      <ion-badge item-right>{{appointment.queue}}</ion-badge>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

@@ -9,6 +9,19 @@
     color: rgb(102, 102, 102);
   }
 
+  .container-banner{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
   .item-appointment{
     padding: 0px;
 
@@ -19,5 +32,24 @@
     ion-label{
       margin: 0px;
     }
+  }
+
+  .btn-checkin{
+    font-size: 1.1em;
+  }
+
+  .desc{
+    padding-bottom: 10px;
+  }
+}
+
+.alert-forecast {
+  .alert-title {
+    color: rgb(69, 163, 161);
+  }
+  .alert-sub-title{
+    font-weight: bold;
+    font-size: 2.5em;
+    color: rgb(102, 102, 102);
   }
 }

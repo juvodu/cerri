@@ -5,6 +5,7 @@ import {Component, ViewChild} from '@angular/core';
 import {NavController, NavParams, Slides} from 'ionic-angular';
 import {Appointment} from "../../model/appointment";
 import {Ad} from "../../model/ad";
+import {CheckoutPage} from "../checkout/checkout";
 
 @Component({
   templateUrl: 'build/pages/time/time.html'
@@ -43,5 +44,19 @@ export class TimePage {
     ads.push(new Ad("2", "What is your story?", "Audible", "headset", "audio.jpg", "audible.png",
       "Create your Audible account now and get your first audio book for free right away on your phone!"));
     return ads;
+  }
+
+  /**
+   * Checkin and show waiting time
+   * @param event
+   * @param item
+   */
+  checkout(appointment:Appointment) {
+
+    console.log('Checkout', appointment);
+    // pass appointment model as parameter to new view
+    this.navCtrl.push(CheckoutPage, {
+      appointment: appointment
+    });
   }
 }

@@ -1,0 +1,36 @@
+.checkout{
+
+  .card{
+    height: 95.1%;
+  }
+
+  .container-banner{
+    height: 57%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.foo{
+
+  .container-rate{
+    padding-left: 12px;
+    margin: 0px;
+  }
+  .rate{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+
+  .logo{
+    width: 30px;
+  }
+}

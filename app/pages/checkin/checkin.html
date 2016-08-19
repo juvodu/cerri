@@ -19,7 +19,9 @@
            <p>{{appointment.doctype}}</p>
          </ion-item>
 
-         <img src="img/checkin/{{appointment.posUri}}">
+        <div class="container-banner">
+          <img class="banner" src="img/checkin/{{appointment.posUri}}">
+        </div>
 
          <ion-list>
 
@@ -33,7 +35,7 @@
              <p item-left>{{appointment.phone}}</p>
            </ion-item>
 
-           <ion-item text-wrap>
+           <ion-item text-wrap class="desc">
              {{appointment.desc}}
            </ion-item>
 
@@ -41,13 +43,13 @@
 
          <ion-row>
            <ion-col>
-             <button primary clear>
+             <button class="btn-checkin" primary clear (click)="showForecast(appointment)">
                <ion-icon name="time"></ion-icon>
                <div>FORECAST</div>
              </button>
            </ion-col>
            <ion-col>
-             <button primary clear (click)="checkin(appointment)">
+             <button class="btn-checkin" primary clear (click)="checkin(appointment)">
                <ion-icon name="checkmark"></ion-icon>
                <div>CHECK IN</div>
              </button>
