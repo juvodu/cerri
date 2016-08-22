@@ -26,7 +26,7 @@ export class CheckinPage {
     let appoints:Array<Appointment> = [];
 
     //some dummy data
-    appoints.push(new Appointment("1", "9 AM, 2 Dec 2016", "Dr. House", "doctor1.png", "Orthopaedist", {}, "map1.png",
+    appoints.push(new Appointment("1", "8 AM, 2 Dec 2016", "Dr. House", "doctor1.png", "Orthopaedist", {}, "map1.png",
       "Gleimstraße 55, 10437 Berlin", "030/783921", "We are honored to have been awarded Best Orthopedic Surgeons by Health Magazine for over a decade.", "1h 55m", 14));
     appoints.push(new Appointment("2", "5 PM, 5 Dec 2016", "Dr. Lee", "doctor2.png", "Pediatrician", {}, "map2.png",
       "Pariser Platz, 10117 Berlin", "030/137924", "Dr. Lee has a special interest in providing care to children with special healthcare needs. Furthermore she" +
